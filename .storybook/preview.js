@@ -1,6 +1,11 @@
 import * as NextImage from 'next/image';
 import '../styles/globals.css';
 
+/*
+ * Note (al): Next JS uses a custom image component to handle image optimization.
+ * We need to tell Storybook to use NextJs Image component for all images.
+ */
+
 const BREAKPOINTS_INT = {
   xs: 375,
   sm: 600,
