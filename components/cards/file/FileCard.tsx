@@ -13,6 +13,7 @@ const FileCard: React.FC<IFileCard> = ({ cid, name, deal_id }) => {
         <div className={styles.card__body}>
           <span className={`${styles.tag} ${styles['tag-blue']}`}>{cid}</span>
           <h4>{name}</h4>
+          <p>{deal_id}</p>
         </div>
       </div>
     </div>
