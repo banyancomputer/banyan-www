@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './PrimaryLayout.module.sass';
 
 export interface IPrimaryLayout {
-  children: '{{component}}';
+  // children: '{{component}}';
 }
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
