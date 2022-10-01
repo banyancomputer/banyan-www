@@ -6,7 +6,7 @@ const Footer: React.FC<IFooter> = ({ className, ...footerProps }) => {
       {...footerProps}
       className={`w-full p-5 bg-slate-100 text-slate-500 ${className}`}
     >
-      <p>Canada</p>
+      <p>Footer</p>
     </footer>
   );
 };

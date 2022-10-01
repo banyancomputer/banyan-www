@@ -1,27 +1,17 @@
 import Head from 'next/head';
-import Footer from '../../navigation/footer/Footer';
-import Header from '../../navigation/header/Header';
+import styles from './PrimaryLayout.module.sass';
 
-export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
-  justify?: 'items-center' | 'items-start';
+export interface IPrimaryLayout {
+  children: '{{component}}';
 }
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({
-  children,
-  justify = 'items-center',
-  ...divProps
-}) => {
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>NextJs Fullstack App Template</title>
+        <title>Primary Layout Example</title>
       </Head>
-      <div {...divProps} className={`min-h-screen flex flex-col ${justify}`}>
-        <Header />
-        <main className="px-5">{children}</main>
-        <div className="m-auto" />
-        <Footer />
-      </div>
+      <main className={styles.main}>{children}</main>
     </>
   );
 };

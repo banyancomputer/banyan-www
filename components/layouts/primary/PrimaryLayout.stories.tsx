@@ -3,7 +3,7 @@ import PrimaryLayout, { IPrimaryLayout } from './PrimaryLayout';
 import { mockPrimaryLayoutProps } from './PrimaryLayout.mocks';
 
 export default {
-  title: 'layouts/Footer',
+  title: 'layouts/PrimaryLayout',
   component: PrimaryLayout,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
