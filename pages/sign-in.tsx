@@ -5,7 +5,7 @@ import * as V from './../lib/utilities/viewer';
 import * as C from './../lib/constants/constants';
 
 /* Wallet Sign In */
-import * as S from './../lib/crypto/siwe';
+// import * as S from './../lib/crypto/siwe';
 
 import Cookies from 'js-cookie';
 import Input from './../components/input/Input';
@@ -60,22 +60,24 @@ async function handleTokenAuthenticate(state: any) {
  */
 async function handleSiweLogin() {
   let host = process.env.API_HOST;
-  let providerData = await S.getProviderData().catch((_: any) => {
-    return null;
-  });
+  let providerData = null 
+  // await S.getProviderData().catch((_: any) => {
+  //   return null;
+  // });
   if (!providerData) {
     return new Error('Could not connect to wallet');
   }
   let { provider, address, ens } = providerData;
   // console.log("Provider Data", providerData);
-  let authKey: string | null = await S.estuaryAuth(
-    provider,
-    address,
-    ens,
-    host
-  ).catch((_: any) => {
-    return null;
-  });
+  let authKey: string | null = null;
+  // await S.estuaryAuth(
+  //   provider,
+  //   address,
+  //   ens,
+  //   host
+  // ).catch((_: any) => {
+  //   return null;
+  // });
   if (!authKey) {
     return new Error('Could not authenticate against Estuary');
   }
@@ -104,7 +106,7 @@ const SignIn: NextPageWithLayout = (_props: any) => {
     <div>
       <H2>Sign in</H2>
 
-      <P style={{ marginTop: 16 }}>
+      {/* <P style={{ marginTop: 16 }}>
         If you have a wallet, you can sign in to Banyan already!
       </P>
 
@@ -160,7 +162,7 @@ const SignIn: NextPageWithLayout = (_props: any) => {
         >
           Authenticate
         </BaseButton>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -168,5 +170,5 @@ const SignIn: NextPageWithLayout = (_props: any) => {
 export default SignIn;
 
 SignIn.getLayout = (page) => {
-  return <PrimaryLayout auth={page.props.auth}>{page}</PrimaryLayout>;
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };
