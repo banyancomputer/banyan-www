@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Mono';
   src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/JetBrainsMono-Regular.woff2') format('woff');
@@ -114,7 +118,8 @@ img {
 html,
 body {
   --main-background: rgba(246, 246, 246, 1);
-  --main-background-foreground: rgba(240, 240, 240, 1);
+  --main-background-foreground: rgb(206, 184, 172);
+  --main-background-accent: #d0cec9;
   --main-background-input: #ffffff;
 
   --main-background-table: rgba(0, 0, 0, 0.04);

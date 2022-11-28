@@ -14,18 +14,18 @@ const Footer: React.FC<IFooter> = ({ className, ...footerProps }) => {
         <nav className={styles.container}>
           <div className={styles.right}>
             <Link href="https://mobile.twitter.com/BanyanStorage">
-              <a className={styles.item}>Twitter</a>
+              {/*<a className={styles.item}>Twitter</a>*/}
             </Link>
             {/*TODO (amiller68): Populate these links*/}
             <Link href="/">
-              <a className={styles.item}>Legal Info</a>
+              {/*<a className={styles.item}>Legal Info</a>*/}
             </Link>
             <Link href="/">
-              <a className={styles.item}>Brand</a>
+              {/*<a className={styles.item}>Brand</a>*/}
             </Link>
             {/*TODO (amiller68): Make this point at our Documentation*/}
             <Link href="https://media.tenor.com/thBezjoRI-IAAAAC/dog-smile.gif">
-              <a className={styles.item}>Documentation</a>
+              {/*<a className={styles.item}>Documentation</a>*/}
             </Link>
           </div>
         </nav>
