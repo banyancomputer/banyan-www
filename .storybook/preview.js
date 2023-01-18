@@ -1,45 +1,12 @@
-import * as NextImage from 'next/image';
-import '../styles/globals.css';
-
-const BREAKPOINTS_INT = {
-  xs: 375,
-  sm: 600,
-  md: 900,
-  lg: 1200,
-  xl: 1536,
-};
-
-const customViewports = Object.fromEntries(
-  Object.entries(BREAKPOINTS_INT).map(([key, val], idx) => {
-    console.log(val);
-    return [
-      key,
-      {
-        name: key,
-        styles: {
-          width: `${val}px`,
-          height: `${(idx + 5) * 10}vh`,
-        },
-      },
-    ];
-  })
-);
-
-// Allow Storybook to handle Next's <Image> component
-const OriginalNextImage = NextImage.default;
-
-Object.defineProperty(NextImage, 'default', {
-  configurable: true,
-  value: (props) => <OriginalNextImage {...props} unoptimized />,
-});
+/* Remember to import Custom Styles here */
+import '../styles/globals.scss';
+import '../components/navigation/header/Header.module.sass';
+// import '../components/navigation/footer/Footer.module.sass';
+// import '../components/buttons/base/BaseButton.module.scss';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
-  viewport: { viewports: customViewports },
 };

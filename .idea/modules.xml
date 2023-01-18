@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/banyan-www.iml" filepath="$PROJECT_DIR$/.idea/banyan-www.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../estuary-www/.idea/estuary-www.iml" filepath="$PROJECT_DIR$/../estuary-www/.idea/estuary-www.iml" />
     </modules>
   </component>
 </project>
